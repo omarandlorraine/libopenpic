@@ -17,7 +17,7 @@ class pic16():
 		self.port('a', 0x05)
 		self.port('b', 0x06)
 		self.port('c', 0x07)
-		self.port('e', 0x09)
+		self.port('e', 0x09) # TODO: Not all bits on port E are available on all pic16s.
 
 
 class pic16f886(pic16):
