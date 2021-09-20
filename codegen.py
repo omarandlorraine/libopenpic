@@ -30,5 +30,7 @@ class pic16f887(pic16):
 		self.port('d', 0x08)
 
 model = eval(sys.argv[1] + "()")
+
+print("#include <stdint.h>")
 for name in model.regs:
-	print("#define %s %s" % (name.upper(), hex(model.regs[name])))
+	print("#define %s (*(uint8_t*)%s)" % (name.upper(), hex(model.regs[name])))

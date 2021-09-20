@@ -1,10 +1,11 @@
-#define PIR1 0xc
-#define PIR2 0xd
-#define PORTA 0x5
-#define TRISA 0x85
-#define PORTB 0x6
-#define TRISB 0x86
-#define PORTC 0x7
-#define TRISC 0x87
-#define PORTE 0x9
-#define TRISE 0x89
+#include <stdint.h>
+#define PIR1 (*(uint8_t*)0xc)
+#define PIR2 (*(uint8_t*)0xd)
+#define PORTA (*(uint8_t*)0x5)
+#define TRISA (*(uint8_t*)0x85)
+#define PORTB (*(uint8_t*)0x6)
+#define TRISB (*(uint8_t*)0x86)
+#define PORTC (*(uint8_t*)0x7)
+#define TRISC (*(uint8_t*)0x87)
+#define PORTE (*(uint8_t*)0x9)
+#define TRISE (*(uint8_t*)0x89)
